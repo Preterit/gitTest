@@ -20,8 +20,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * 主分支的方法
+     * dev的方法
      */
     fun gitMethod() {
+        println("dev --- 打印")
     }
 }
