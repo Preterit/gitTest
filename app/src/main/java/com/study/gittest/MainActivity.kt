@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
      * master的方法
      */
     fun gitMethod() {
+        println("master分支 --- 准备")
         println("master分支 --- 准备开分支")
-        println("master分支 --- 准备开启新的分支")
         println("dev分支 --- 垃圾")
         println("dev分支 --- ")
         println("master分支 --- 1")
-        println("dev分支 --- 准备接受主分支的代码。")
-        println("dev分支 --- 准备接受主分支的代码。")
+        println("dev分支 --- 准备支的代码。")
+        println("dev分支 --- 准备的代码。")
     }
 
     /**
