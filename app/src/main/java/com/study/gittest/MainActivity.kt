@@ -10,13 +10,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val ss = object : Handler() {
-            override fun handleMessage(msg: Message) {
-                super.handleMessage(msg)
-            }
-        }
-
     }
 
     /**
