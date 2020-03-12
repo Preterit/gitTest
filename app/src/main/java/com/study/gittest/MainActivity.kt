@@ -25,6 +25,5 @@ class MainActivity : AppCompatActivity() {
     fun gitMethod() {
         println("dev分支 --- 打印")
         println("dev分支 --- 测试")
-        println("dev分支提交到master分支的标示")
     }
 }
