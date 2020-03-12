@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
      * dev的方法
      */
     fun gitMethod() {
-        println("dev分支 --- 打印")
-        println("dev分支 --- 测试")
+        println("dev分支 --- 垃圾")
+        println("dev分支 --- ")
     }
 }
