@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
      * dev的方法
      */
     fun gitMethod() {
-        println("dev分支 --- 垃圾")
-        println("dev分支 --- ")
+        println("dev分支 --- 准备接受主分支的代码。")
+        println("dev分支 --- 准备接受主分支的代码。")
     }
 }
