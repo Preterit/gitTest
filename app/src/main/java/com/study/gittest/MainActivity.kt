@@ -11,11 +11,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       val ss = object: Handler() {
-           override fun handleMessage(msg: Message) {
-               super.handleMessage(msg)
-           }
+        val ss = object : Handler() {
+            override fun handleMessage(msg: Message) {
+                super.handleMessage(msg)
+            }
         }
+
+    }
+
+    /**
+     * 主分支的方法
+     */
+    fun gitMethod() {
 
     }
 }
