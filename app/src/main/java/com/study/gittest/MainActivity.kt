@@ -24,8 +24,5 @@ class MainActivity : AppCompatActivity() {
      */
     fun gitMethod() {
         println("master分支 -- 打印")
-        println("master分支 -- 打印2")
-        println("dev分支 --——- 打印")
-        println("dev分支 --——- 打印2")
     }
 }
