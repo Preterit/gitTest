@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val ss = object : Handler() {
             override fun handleMessage(msg: Message) {
+                println(TAG)
             }
         }
 
