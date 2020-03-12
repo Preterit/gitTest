@@ -25,5 +25,7 @@ class MainActivity : AppCompatActivity() {
     fun gitMethod() {
         println("master分支 --- 标示")
         println("master分支 --- 测试")
+        println("dev分支 --- 垃圾")
+        println("dev分支 --- ")
     }
 }
