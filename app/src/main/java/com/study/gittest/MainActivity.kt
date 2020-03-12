@@ -35,9 +35,13 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    /**
+     * interrupted 方式停止线程
+     */
     private val interruptedThread = object : Runnable {
         override fun run() {
             Thread.currentThread().isInterrupted
+
         }
 
     }
