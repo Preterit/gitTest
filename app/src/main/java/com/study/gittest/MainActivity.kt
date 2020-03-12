@@ -27,5 +27,6 @@ class MainActivity : AppCompatActivity() {
         println("master分支 --- 准备开启新的分支")
         println("dev分支 --- 垃圾")
         println("dev分支 --- ")
+        println("master分支 --- 1")
     }
 }
