@@ -26,4 +26,11 @@ class MainActivity : AppCompatActivity() {
         println("dev分支 --- 准备接受主分支的代码。")
         println("dev分支 --- 准备接受主分支的代码。")
     }
+
+    /**
+     * dev 分支的方法
+     */
+    fun devMethod() {
+        println("devMethod")
+    }
 }
