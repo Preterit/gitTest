@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private var stopTag = true
 
     private lateinit var thread: Thread
+    private lateinit var interruptThread: Thread
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +32,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         thread = Thread(stopTagThread)
-        thread.start()
+//        thread.start()
+
+        interruptThread = Thread(interruptedRunnable)
+        interruptThread.start()
 
     }
 
@@ -39,12 +43,25 @@ class MainActivity : AppCompatActivity() {
     /**
      * interrupted 方式停止线程
      */
-    private val interruptedThread = object : Runnable {
+    private val interruptedRunnable = object : Runnable {
         override fun run() {
-            Thread.currentThread().isInterrupted
-
+//            while (true) {
+//                try {
+//                    Log.e(TAG, "interruptedThread -- ${Thread.currentThread().isInterrupted}")
+//                    Thread.sleep(50000)
+//                    Log.e(TAG, "interruptedThread -- 睡眠结束")
+//                } catch (e: Exception) {
+//                    Log.e(TAG, "catch -- ${Thread.currentThread().isInterrupted}")
+////                    break
+//                } finally {
+//                }
+//            }
+            while (!Thread.currentThread().isInterrupted){
+                Log.e(TAG, " -- ${Thread.currentThread().isInterrupted}")
+                Thread.sleep(10000)
+            }
+            Log.e(TAG, "interruptedThread -- stop")
         }
-
     }
 
     /**
@@ -59,12 +76,6 @@ class MainActivity : AppCompatActivity() {
         Log.e(TAG, "stopTagThread  -- stoped")
     }
 
-    private val handler = object : Handler() {
-        override fun handleMessage(msg: Message) {
-
-        }
-    }
-
     /**
      * 线程停止的点击事件
      */
@@ -77,6 +88,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "click", Toast.LENGTH_SHORT).show()
             stopTag = false
         }
+    }
+
+    /**
+     * interrupt 方法中断线程
+     */
+    fun interruptClick(v: View) {
+        interruptThread.interrupt()
     }
 
     /**

@@ -7,15 +7,27 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/btnStop"
+        android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#228B22"
         android:clickable="true"
         android:gravity="center"
         android:onClick="stopClick"
-        android:padding="10dp"
+        android:padding="20dp"
         android:text="stop thread"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#228B22"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="interruptClick"
+        android:padding="20dp"
+        android:text="interrupt thread"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
