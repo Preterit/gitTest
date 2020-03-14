@@ -1,10 +1,12 @@
 package com.study.gittest
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.util.Log
 import android.view.View
+import android.widget.HorizontalScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -35,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 //        thread.start()
 
         interruptThread = Thread(interruptedRunnable)
-        interruptThread.start()
+//        interruptThread.start()
 
     }
 
@@ -56,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 //                } finally {
 //                }
 //            }
-            while (!Thread.currentThread().isInterrupted){
+            while (!Thread.currentThread().isInterrupted) {
                 Log.e(TAG, " -- ${Thread.currentThread().isInterrupted}")
                 Thread.sleep(10000)
             }
@@ -98,13 +100,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * master的方法
+     * 跳转新activity
      */
-    fun gitMethod() {
-        println("master分支 --- 准备开分支")
-        println("master分支 --- 准备开启新的分支")
-        println("dev分支 --- 垃圾")
-        println("dev分支 --- ")
-        println("master分支 --- 1")
+    fun skip(v: View) {
+        startActivity(Intent(this,HorScrActivity::class.java))
     }
 }
